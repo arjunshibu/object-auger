@@ -1,0 +1,37 @@
+{
+  "name": "object-auger",
+  "version": "1.0.0",
+  "description": "Safely get or set values in nested objects and arrays.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "nested",
+    "object",
+    "array",
+    "get",
+    "set",
+    "fetch",
+    "values",
+    "value",
+    "properties",
+    "property",
+    "props",
+    "prop",
+    "key"
+  ],
+  "author": {
+    "name": "Austin Gordon",
+    "email": "gordon.austin2@gmail.com",
+    "url": "https://www.austinleegordon.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hutsoninc/object-auger"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
