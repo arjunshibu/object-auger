@@ -1,6 +1,6 @@
 {
   "name": "object-auger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safely get or set values in nested objects and arrays.",
   "main": "index.js",
   "scripts": {
