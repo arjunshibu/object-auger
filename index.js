@@ -1,5 +1,5 @@
 module.exports = {
-    get: function (obj, path, fallback) {
+    get: function(obj, path, fallback) {
         if (!isValidObject(obj)) {
             return fallback;
         }
@@ -26,7 +26,7 @@ module.exports = {
         }
         return obj;
     },
-    has: function (obj, path) {
+    has: function(obj, path) {
         if (!isValidObject(obj) || !Array.isArray(path)) {
             return false;
         }
@@ -52,7 +52,7 @@ module.exports = {
         }
         return true;
     },
-    set: function (obj, path, val) {
+    set: function(obj, path, val) {
         if (!isValidObject(obj) || !Array.isArray(path)) {
             return obj;
         }
@@ -77,8 +77,8 @@ module.exports = {
             obj = obj[part];
         }
         return root;
-    }
-}
+    },
+};
 
 function isValidObject(val) {
     return (val !== null && typeof val === 'object') || Array.isArray(val);
