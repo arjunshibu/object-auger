@@ -198,6 +198,11 @@ describe('auger.set', function () {
         expect(auger.set({}, ['a', 0])).toStrictEqual({ a: [undefined] });
         expect(auger.set({ a: { b: 'c' } }, ['a', 'b'])).toStrictEqual({ a: { b: undefined } });
     });
+
+    test('should not set magic attribute values', function () {
+        expect(auger.set({}, ['__proto__', 'polluted'], true)).toStrictEqual({ polluted: true });
+        expect({}.polluted).toBe(undefined);
+    });
     
     test('should set as object or array depending on if the value is a string or number', function () {
         expect(auger.set({}, ['a', 0], 'c')).toStrictEqual({ a: ['c'] });

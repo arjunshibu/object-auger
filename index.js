@@ -61,7 +61,9 @@ module.exports = {
         for (let i = 0; i < len; i++) {
             const part = path[i];
 
-            if (i === len - 1) {
+            if (isPrototypePolluted(part)) {
+                continue;
+            } else if (i === len - 1) {
                 obj[part] = val;
             } else {
                 const nextType = typeof path[i + 1];
@@ -82,4 +84,8 @@ module.exports = {
 
 function isValidObject(val) {
     return (val !== null && typeof val === 'object') || Array.isArray(val);
+}
+
+function isPrototypePolluted(key) {
+    return ['__proto__', 'constructor', 'prototype'].includes(key);
 }
